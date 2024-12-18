@@ -73,11 +73,16 @@
       - MobSharkSalvage
       rareChance: 0.2
       prototypes:
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
+        # - MobCarpSalvage
+        # - MobCarpSalvage
+        # - MobCarpSalvage
+        # - MobCarpSalvage
+        # - MobCarpSalvage
+        - MobNGCarpSalvage # Imperial NG Update
+        - MobNGCarpSalvage # Imperial NG Update
+        - MobNGCarpSalvage # Imperial NG Update
+        - MobNGCarpSalvage # Imperial NG Update
+        - MobNGCarpSalvage # Imperial NG Update
         - MobTickSalvage
         - MobTickSalvage
         - MobTickSalvage
@@ -125,11 +130,16 @@
     - MobSharkSalvage
     rareChance: 0.2
     prototypes:
-    - MobCarpSalvage
-    - MobCarpSalvage
-    - MobCarpSalvage
-    - MobCarpSalvage
-    - MobCarpSalvage
+    # - MobCarpSalvage
+    # - MobCarpSalvage
+    # - MobCarpSalvage
+    # - MobCarpSalvage
+    # - MobCarpSalvage
+    - MobNGCarpSalvage # Imperial NG Update
+    - MobNGCarpSalvage # Imperial NG Update
+    - MobNGCarpSalvage # Imperial NG Update
+    - MobNGCarpSalvage # Imperial NG Update
+    - MobNGCarpSalvage # Imperial NG Update
     - MobTickSalvage
     - MobTickSalvage
     - MobTickSalvage

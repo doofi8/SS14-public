@@ -11,6 +11,7 @@
     - SpaceTrafficControlEventScheduler
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -43,6 +44,7 @@
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: AllerAtOnce
@@ -67,6 +69,7 @@
     - SpaceTrafficControlEventScheduler
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Extended
@@ -81,6 +84,7 @@
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Greenshift
@@ -104,6 +108,7 @@
   description: secret-description
   rules:
     - Secret
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: SecretExtended #For Admin Use: Runs Extended but shows "Secret" in lobby.
@@ -117,6 +122,7 @@
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
@@ -155,6 +161,7 @@
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Deathmatch
@@ -168,6 +175,7 @@
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Nukeops
@@ -183,6 +191,7 @@
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Revolutionary
@@ -200,6 +209,7 @@
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Zombie
@@ -218,6 +228,7 @@
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
+  - SubGamemodesChristmasAntags # Imperial NG Update
 
 - type: gamePreset
   id: Zombieteors

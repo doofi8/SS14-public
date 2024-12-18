@@ -152,6 +152,8 @@
     - state: green
     - sprite: Mobs/Aliens/Carps/dragon.rsi
       state: alive
+  - type: GhostRoleMobSpawner # Imperial NG Update
+    prototype: MobNGDragon # Imperial NG Update
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
