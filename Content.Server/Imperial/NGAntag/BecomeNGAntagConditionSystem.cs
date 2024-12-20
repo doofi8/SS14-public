@@ -78,6 +78,11 @@ namespace Content.Server.Imperial.NGAntag
                 return;
 
             ngAntagComp.Target = targetMindComp.CurrentEntity;
+
+            if (!TryComp<NGAntagTargetComponent>(targetMindComp.CurrentEntity, out var targetComp))
+                return;
+
+            targetComp.Claimed = true;
         }
 
         public bool IsNGAntag(EntityUid mindId)
@@ -93,10 +98,13 @@ namespace Content.Server.Imperial.NGAntag
             if (!TryComp<MindComponent>(mindId, out var comp))
                 return false;
 
-            if (!HasComp<NGAntagTargetComponent>(comp.CurrentEntity))
+            if (!TryComp<NGAntagTargetComponent>(comp.CurrentEntity, out var targetComp))
                 return false;
 
-            return true;
+            if (!targetComp.Claimed)
+                return true;
+
+            return false;
         }
 
         private float GetProgress(EntityUid target)
