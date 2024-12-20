@@ -4,13 +4,13 @@ using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Imperial.NGAntag.Events;
 using Content.Shared.Body.Components;
+using Content.Server.Antag;
 using Content.Shared.Popups;
 using Content.Shared.Inventory;
 using Content.Shared.Actions;
 using Content.Shared.Timing;
 using Content.Shared.Interaction.Events;
 using Robust.Shared.Prototypes;
-using Content.Server.Antag;
 using Robust.Shared.Player;
 
 namespace Content.Server.Imperial.NGAntag;
@@ -25,7 +25,6 @@ public sealed class CurseGiftSystem : EntitySystem
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly UseDelaySystem _delay = default!;
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
-
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultNGAntagRule = "NGAntag";
@@ -61,7 +60,7 @@ public sealed class CurseGiftSystem : EntitySystem
             return;
         }
 
-        _popup.PopupEntity(Loc.GetString("cursed-gift-alert"), args.Target.Value, args.Target.Value, PopupType.Large);
+        _popup.PopupEntity(Loc.GetString("cursed-gift-alert"), args.Target.Value, args.Target.Value, PopupType.LargeCaution);
 
         var doAfterCancelled = !_doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, uid.Comp.CurseDelay, new BecomeNGAntagDoAfterEvent(), uid, target: args.Target, used: uid)
         {

@@ -34,6 +34,19 @@ public sealed class NGAntagSystem : EntitySystem
             if (component.TargetGoaled == true)
                 continue;
 
+            if (Deleted(component.Target.Value) || Paused(component.Target.Value))
+            {
+                component.Target = null;
+                if (!component.TargetDeleted)
+                {
+                    component.TargetDeleted = !component.TargetDeleted;
+                    _popup.PopupEntity("Ваша цель покинула этот мир. У Вас появилась новая способность для замены цели!", component.Owner, component.Owner, PopupType.LargeCaution);
+                    _actionsSystem.AddAction(component.Owner, "ActionTryChangeObjective");
+                }
+
+                continue;
+            }
+
             if (component.CurseTimer == TimeSpan.FromMinutes(5))
                 _popup.PopupEntity(Loc.GetString("cursed-gift-polymorph-message-5min"), component.Owner, component.Owner, PopupType.Medium);
 

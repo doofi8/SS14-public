@@ -6,7 +6,6 @@ using Content.Server.Imperial.NGAntag.Components;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Mind;
 using Robust.Shared.Random;
-using Content.Shared.NukeOps;
 
 namespace Content.Server.Imperial.NGAntag
 {
@@ -56,10 +55,8 @@ namespace Content.Server.Imperial.NGAntag
                 return;
 
             var targetMind = args.MindId;
-            var potentialTargets = allHumans.Where(mind => !IsNGAntag(mind)
-                                                        && !IsNukeOpsAntag(mind)
-                                                        && !IsLoneNukeOpsAntag(mind)
-                                                        && !IsOneMapId(mind, targetMind)).ToList();
+            var potentialTargets = allHumans.Where(mind => IsNGAntagTarget(mind)
+                                                        && !IsNGAntag(mind)).ToList();
             if (potentialTargets.Count == 0)
             {
                 args.Cancelled = true;
@@ -77,6 +74,9 @@ namespace Content.Server.Imperial.NGAntag
             if (!TryComp<NGAntagComponent>(antagMindComp.CurrentEntity, out var ngAntagComp))
                 return;
 
+            if (targetMindComp.CurrentEntity == null)
+                return;
+
             ngAntagComp.Target = targetMindComp.CurrentEntity;
         }
 
@@ -88,34 +88,12 @@ namespace Content.Server.Imperial.NGAntag
             return true;
         }
 
-        public bool IsNukeOpsAntag(EntityUid mindId)
-        {
-            if (!_role.MindHasRole<NukeopsRoleComponent>(mindId))
-                return false;
-
-            return true;
-        }
-
-        public bool IsLoneNukeOpsAntag(EntityUid mindId)
+        public bool IsNGAntagTarget(EntityUid mindId)
         {
             if (!TryComp<MindComponent>(mindId, out var comp))
                 return false;
 
-            if (!HasComp<NukeOperativeComponent>(comp.CurrentEntity))
-                return false;
-
-            return true;
-        }
-
-        public bool IsOneMapId(EntityUid mindId, EntityUid targerMindId)
-        {
-            if (!TryComp<MindComponent>(mindId, out var comp))
-                return false;
-
-            if (comp.CurrentEntity == null)
-                return false;
-
-            if (!(Transform(comp.CurrentEntity.Value).MapUid == Transform(targerMindId).MapUid))
+            if (!HasComp<NGAntagTargetComponent>(comp.CurrentEntity))
                 return false;
 
             return true;

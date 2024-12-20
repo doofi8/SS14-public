@@ -42,6 +42,20 @@
       state: pinpointer-crewprox
     event: !type:TryToFindTargetSpellEvent
 
+- type: entity
+  id: ActionTryChangeObjective
+  name: Заменить цель
+  description: Заменяет цель Тайного Санты и обновляет таймер проклятия
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Fun/sharkplush.rsi
+      state: grey
+    event: !type:TryChangeObjectiveSpellEvent
+
 - type: polymorph
   id: CursedGiftSmite
   configuration:

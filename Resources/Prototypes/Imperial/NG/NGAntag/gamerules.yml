@@ -2,7 +2,6 @@
   parent: BaseMindRoleAntag
   id: MindRoleNGAntag
   name: NGAntag Role
-#  description: mind-role-traitor-description
   components:
   - type: MindRole
     antagPrototype: NGAntag
@@ -22,7 +21,7 @@
   id: NGAntag
   components:
   - type: GameRule
-    minPlayers: 1
+    minPlayers: 15
   - type: AntagObjectives
     objectives:
     - BecomeNGAntagRandomPersonObjective

@@ -19,6 +19,7 @@ namespace Content.Server.Imperial.NGAntag
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly AntagSelectionSystem _antag = default!;
+        [Dependency] private readonly ObjectivesSystem _objectives = default!;
         [Dependency] private readonly MindSystem _mindSystem = default!;
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly SharedHandsSystem _hands = default!;
@@ -36,6 +37,7 @@ namespace Content.Server.Imperial.NGAntag
             SubscribeLocalEvent<SpawnCursedGiftSpellEvent>(OnSpawnCursedGiftSpell);
             SubscribeLocalEvent<SpawnAshGiftSpellEvent>(OnSpawnAshGiftSpell);
             SubscribeLocalEvent<TryToFindTargetSpellEvent>(TryToFindTargetSpell);
+            SubscribeLocalEvent<TryChangeObjectiveSpellEvent>(TryChangeObjectiveSpell);
         }
 
         private void AfterAntagSelected(Entity<NGAntagRuleComponent> rule, ref AfterAntagEntitySelectedEvent args)
@@ -53,6 +55,7 @@ namespace Content.Server.Imperial.NGAntag
 
             EnsureComp<NGAntagRoleComponent>(mindId);
             EnsureComp<NGAntagComponent>(ngAntag);
+            RemComp<NGAntagTargetComponent>(ngAntag);
             _antag.SendBriefing(ngAntag, MakeBriefing(), Color.LightGreen, ngAntagRule.GreetingSound);
             _actionsSystem.AddAction(ngAntag, "ActionSpawnCursedGift");
             _actionsSystem.AddAction(ngAntag, "ActionTryToFindTarget");
@@ -118,6 +121,65 @@ namespace Content.Server.Imperial.NGAntag
             NerfEffectsOnSpawnCursedGift(ev.Performer);
             compGift.OwnerGift = ev.Performer;
             compUser.LastCursedGift = result;
+        }
+
+        private void TryChangeObjectiveSpell(TryChangeObjectiveSpellEvent ev)
+        {
+            if (ev.Handled)
+                return;
+            ev.Handled = true;
+
+            if (!_mindSystem.TryGetMind(ev.Performer, out var mindId, out var mind))
+                return;
+
+            var objective = _objectives.TryCreateObjective(mindId, mind, "BecomeNGAntagRandomPersonObjective");
+
+            if (objective == null)
+            {
+                _popup.PopupEntity("Не удалось найти новую цель, попробуйте еще раз через некоторое время", ev.Performer, ev.Performer, PopupType.Medium);
+
+                return;
+            }
+
+            var lastObjectiveIndex = -1;
+
+            if (TryComp<MindComponent>(mindId, out var mindComp))
+            {
+                foreach (var objectiveUid in mindComp.Objectives)
+                {
+                    lastObjectiveIndex++;
+                    if (HasComp<NGAntagPickRandomPersonComponent>(objectiveUid))
+                    {
+                        break;
+                    }
+                }
+            }
+
+            _mindSystem.TryRemoveObjective(mindId, mind, 0);
+
+            _mindSystem.AddObjective(mindId, mind, objective.Value);
+
+            _popup.PopupEntity("Новая цель сгенерирована для Вас. Таймер обнулён", ev.Performer, ev.Performer, PopupType.Medium);
+
+            if (TryComp<NGAntagComponent>(ev.Performer, out var antagComp))
+            {
+                antagComp.CurseTimer = TimeSpan.FromMinutes(15);
+                antagComp.TargetDeleted = !antagComp.TargetDeleted;
+            }
+
+            if (TryComp<ActionsContainerComponent>(ev.Performer, out var compActionCont))
+            {
+                foreach (var action in compActionCont.Container.ContainedEntities)
+                {
+                    if (TryComp<MetaDataComponent>(action, out var metaComp))
+                    {
+                        if (metaComp.EntityPrototype != null && (metaComp.EntityPrototype.ID == "ActionTryChangeObjective"))
+                        {
+                            _actionsSystem.RemoveAction(action);
+                        }
+                    }
+                }
+            }
         }
 
         private void TryToFindTargetSpell(TryToFindTargetSpellEvent ev)

@@ -26,5 +26,8 @@ public sealed partial class NGAntagComponent : Component
     public bool TargetGoaled;
 
     [DataField]
-    public TimeSpan CurseTimer = TimeSpan.FromMinutes(10);
+    public TimeSpan CurseTimer = TimeSpan.FromMinutes(15);
+
+    [DataField]
+    public bool TargetDeleted = false;
 }

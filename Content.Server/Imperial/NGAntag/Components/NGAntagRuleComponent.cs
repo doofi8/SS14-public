@@ -8,9 +8,6 @@ namespace Content.Server.Imperial.NGAntag.Components;
 public sealed partial class NGAntagRuleComponent : Component
 {
     [DataField]
-    public string NGAntagObjective = "BecomeNGAntagRandomPersonObjective";
-
-    [DataField]
     public ProtoId<AntagPrototype> NGAntagPrototypeId = "NGAntag";
 
     [DataField]
