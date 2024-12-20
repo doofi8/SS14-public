@@ -1,0 +1,48 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleNGAntag
+  name: NGAntag Role
+#  description: mind-role-traitor-description
+  components:
+  - type: MindRole
+    antagPrototype: NGAntag
+    exclusiveAntag: false
+  - type: NGAntagRole
+
+- type: entity
+  noSpawn: true
+  parent: BaseGameRule
+  id: BaseNGAntagRule
+  components:
+  - type: NGAntagRule
+  - type: AntagSelection
+
+- type: entity
+  parent: BaseNGAntagRule
+  id: NGAntag
+  components:
+  - type: GameRule
+    minPlayers: 1
+  - type: AntagObjectives
+    objectives:
+    - BecomeNGAntagRandomPersonObjective
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ NGAntag ]
+      max: 1
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleNGAntag
+
+- type: entity
+  noSpawn: true
+  parent: BaseGameRule
+  id: SubGamemodesNGAntags
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: NGAntag
+      prob: 1
