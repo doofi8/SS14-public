@@ -27,6 +27,11 @@
   - skillMaintenance
   - skillMediumConstruction
   - skillHacking
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: SeniorEngineerGear

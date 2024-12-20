@@ -11,3 +11,8 @@
   - Maintenance
   extendedAccess:
   - External
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget

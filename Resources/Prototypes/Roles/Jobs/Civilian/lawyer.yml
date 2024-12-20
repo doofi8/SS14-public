@@ -15,6 +15,11 @@
   - Lawyer
   - Brig
   - Maintenance
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: LawyerGear

@@ -13,6 +13,11 @@
   access:
   - Research
   - Maintenance
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: ScientistGear

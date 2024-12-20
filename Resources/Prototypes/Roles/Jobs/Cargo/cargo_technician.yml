@@ -11,6 +11,11 @@
   - Maintenance
   extendedAccess:
   - Salvage
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: CargoTechGear

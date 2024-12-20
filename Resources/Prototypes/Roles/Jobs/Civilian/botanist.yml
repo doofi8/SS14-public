@@ -13,6 +13,11 @@
   extendedAccess:
   - Kitchen
   - Bar
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: BotanistGear

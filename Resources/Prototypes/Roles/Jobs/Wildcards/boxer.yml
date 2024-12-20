@@ -9,6 +9,11 @@
   access:
   - Service
   - Maintenance
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: BoxerGear

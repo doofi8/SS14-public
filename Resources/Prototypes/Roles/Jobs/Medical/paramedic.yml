@@ -22,7 +22,11 @@
   - skillBaseConstraction
   - skillPharmacology
   - skillMedicalEquipment
-
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: ParamedicGear

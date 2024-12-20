@@ -20,6 +20,9 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial # Imperial NGAntag
+    components:
+      - type: NGAntagTarget
   skills:
   - skillBotany
   - skillBaseMed

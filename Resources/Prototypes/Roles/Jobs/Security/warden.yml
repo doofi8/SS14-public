@@ -23,6 +23,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Imperial NGAntag
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: WardenGear
