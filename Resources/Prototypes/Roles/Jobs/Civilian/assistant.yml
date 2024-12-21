@@ -8,6 +8,11 @@
   supervisors: job-supervisors-everyone
   access:
   - Maintenance
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: PassengerGear

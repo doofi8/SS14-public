@@ -23,7 +23,11 @@
   - External
   special: #Imperia start
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ] #Imperia end
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget # Imperial NGAntag
+      #Imperia end
 
 - type: startingGear
   id: NewBrigmedicGear

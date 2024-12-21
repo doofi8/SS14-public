@@ -1,0 +1,65 @@
+- type: entity
+  id: ActionSpawnCursedGift
+  name: Получить часть проклятой силы
+  description: Возвращает Вам Ваш проклятый подарок
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 25
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/disintegrate.ogg
+    icon:
+      sprite: Imperial/NG/NGAntag/cursegift.rsi
+      state: present
+    event: !type:SpawnCursedGiftSpellEvent
+
+- type: entity
+  id: ActionSpawnAshGift
+  name: Создать подарок с пеплом
+  description: Создает подарок с пеплом возле Вас
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 60
+    itemIconStyle: BigAction
+    icon:
+      sprite: Imperial/NG/presents.rsi
+      state: present2
+    event: !type:SpawnAshGiftSpellEvent
+
+- type: entity
+  id: ActionTryToFindTarget
+  name: Найти цель
+  description: Сообщает Вам расстояние до Вашей цели
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 1
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Devices/pinpointer.rsi
+      state: pinpointer-crewprox
+    event: !type:TryToFindTargetSpellEvent
+
+- type: entity
+  id: ActionTryChangeObjective
+  name: Заменить цель
+  description: Заменяет цель Тайного Санты и обновляет таймер проклятия
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Fun/sharkplush.rsi
+      state: grey
+    event: !type:TryChangeObjectiveSpellEvent
+
+- type: polymorph
+  id: CursedGiftSmite
+  configuration:
+    entity: CursedGift
+    forced: true
+    inventory: Drop
+    allowRepeatedMorphs: true

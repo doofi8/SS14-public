@@ -17,6 +17,7 @@
     components:
     - type: MimePowers
     - type: FrenchAccent
+    - type: NGAntagTarget # Imperial NGAntag
 
 - type: startingGear
   id: MimeGear

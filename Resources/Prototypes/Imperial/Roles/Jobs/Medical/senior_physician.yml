@@ -30,6 +30,11 @@
   - skillSurgery
   - skillMedicalEquipment
   - skillNeuroSurgery
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+      components:
+        - type: NGAntagTarget
 
 - type: startingGear
   id: SeniorPhysicianGear

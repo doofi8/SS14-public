@@ -31,6 +31,7 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+      - type: NGAntagTarget # Imperial NGAntag
 
 - type: startingGear
   id: HoSGear

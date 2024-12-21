@@ -1,5 +1,6 @@
 using Content.Server.Administration.Commands;
 using Content.Server.Antag;
+using Content.Server.Imperial.NGAntag.Components; // Imperial NGAntag
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Zombies;
 using Content.Shared.Administration;
@@ -10,6 +11,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+
 
 namespace Content.Server.Administration.Systems;
 
@@ -32,6 +34,10 @@ public sealed partial class AdminVerbSystem
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultThiefRule = "Thief";
+
+    // Imperial NGAntag
+    [ValidatePrototypeId<EntityPrototype>]
+    private const string DefaultNGAntagRule = "NGAntag";
 
     [ValidatePrototypeId<StartingGearPrototype>]
     private const string PirateGearId = "PirateGear";
@@ -151,5 +157,20 @@ public sealed partial class AdminVerbSystem
             Message = Loc.GetString("admin-verb-make-thief"),
         };
         args.Verbs.Add(thief);
+
+        // Imperial NGAntag
+        Verb ngAntag = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-ngAntag"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Imperial/NG/NGAntag/cursegift.rsi"), "present"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<NGAntagRuleComponent>(targetPlayer, DefaultNGAntagRule);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-ngAntag"),
+        };
+        args.Verbs.Add(ngAntag);
     }
 }

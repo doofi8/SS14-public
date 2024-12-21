@@ -24,6 +24,9 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial # Imperial NGAntag
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: SecurityCadetGear

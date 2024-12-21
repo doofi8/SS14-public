@@ -13,6 +13,11 @@
   - Kitchen
   extendedAccess:
   - Hydroponics
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
 
 - type: startingGear
   id: ServiceWorkerGear

@@ -31,6 +31,7 @@
     - type: SleepEmitSound
       snore: /Audio/Voice/Misc/silly_snore.ogg
       interval: 10
+    - type: NGAntagTarget # Imperial NGAntag
   - !type:AddImplantSpecial
     implants: [ SadTromboneImplant ]
 

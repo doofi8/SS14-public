@@ -16,3 +16,8 @@
   access:
   - Janitor
   - Maintenance
+  # Imperial NGAntag
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: NGAntagTarget
