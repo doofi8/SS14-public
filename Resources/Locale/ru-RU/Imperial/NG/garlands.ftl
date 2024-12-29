@@ -1,9 +1,6 @@
 ent-GarlandNG1 = гирлянда
  .desc = заставляет почувствовать праздник
  .suffix = NG
-ent-GarlandNG1 = гирлянда
- .desc = заставляет почувствовать праздник
- .suffix = NG
 ent-GarlandNG2 = гирлянда
  .desc = заставляет почувствовать праздник
  .suffix = NG
