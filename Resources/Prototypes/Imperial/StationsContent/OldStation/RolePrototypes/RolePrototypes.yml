@@ -14,20 +14,20 @@
       sprite: Markers/jobs.rsi
       state: ertleadereva
     - type: Loadout
-      prototypes: [ OldStationTraderGear ]
+      prototypes: [OldStationTraderGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: CrewSkills
-      skills:
-        - skillBotany
-        - skillBaseMed
-        - skillBaseConstraction
-        - skillCooking
-        - skillBartending
-        - skillMedicalEquipment
-        - skillPiloting
-        - skillShooting
-        - skillMaintenance
+    # - type: CrewSkills
+    #   skills:
+    #     - skillBotany
+    #     - skillBaseMed
+    #     - skillBaseConstraction
+    #     - skillCooking
+    #     - skillBartending
+    #     - skillMedicalEquipment
+    #     - skillPiloting
+    #     - skillShooting
+    #     - skillMaintenance
 
 - type: entity
   noSpawn: false
@@ -48,18 +48,18 @@
       sprite: Markers/jobs.rsi
       state: ertleadereva
     - type: Loadout
-      prototypes: [ OldStationSmugglerGear ]
+      prototypes: [OldStationSmugglerGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: CrewSkills
-      skills:
-        - skillBotany
-        - skillBaseMed
-        - skillBaseConstraction
-        - skillHacking
-        - skillPiloting
-        - skillShooting
-        - skillMaintenance
+    # - type: CrewSkills
+    #   skills:
+    #     - skillBotany
+    #     - skillBaseMed
+    #     - skillBaseConstraction
+    #     - skillHacking
+    #     - skillPiloting
+    #     - skillShooting
+    #     - skillMaintenance
 
 - type: entity
   noSpawn: false
@@ -77,22 +77,22 @@
       sprite: Markers/jobs.rsi
       state: ertleadereva
     - type: Loadout
-      prototypes: [ OldStationMercGear ]
+      prototypes: [OldStationMercGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: CrewSkills
-      skills:
-        - skillBotany
-        - skillBaseMed
-        - skillBaseConstraction
-        - skillHacking
-        - skillInstrumentation
-        - skillMaintenance
-        - skillMedicalEquipment
-        - skillPharmacology
-        - skillPiloting
-        - skillShooting
-        - skillSurgery
+    # - type: CrewSkills
+    #   skills:
+    #     - skillBotany
+    #     - skillBaseMed
+    #     - skillBaseConstraction
+    #     - skillHacking
+    #     - skillInstrumentation
+    #     - skillMaintenance
+    #     - skillMedicalEquipment
+    #     - skillPharmacology
+    #     - skillPiloting
+    #     - skillShooting
+    #     - skillSurgery
 
 - type: entity
   noSpawn: false
@@ -110,22 +110,22 @@
       sprite: Markers/jobs.rsi
       state: ertleadereva
     - type: Loadout
-      prototypes: [ OldStationHeadMercGear ]
+      prototypes: [OldStationHeadMercGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: CrewSkills
-      skills:
-        - skillBotany
-        - skillBaseMed
-        - skillBaseConstraction
-        - skillHacking
-        - skillInstrumentation
-        - skillMaintenance
-        - skillMedicalEquipment
-        - skillPharmacology
-        - skillPiloting
-        - skillShooting
-        - skillSurgery
+    # - type: CrewSkills
+    #   skills:
+    #     - skillBotany
+    #     - skillBaseMed
+    #     - skillBaseConstraction
+    #     - skillHacking
+    #     - skillInstrumentation
+    #     - skillMaintenance
+    #     - skillMedicalEquipment
+    #     - skillPharmacology
+    #     - skillPiloting
+    #     - skillShooting
+    #     - skillSurgery
 
 - type: entity
   noSpawn: false
@@ -143,73 +143,17 @@
       sprite: Markers/jobs.rsi
       state: ertleadereva
     - type: Loadout
-      prototypes: [ OldStationBomjGear ]
+      prototypes: [OldStationBomjGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
-    - type: CrewSkills
-      skills:
-        - skillBotany
-        - skillBaseMed
-        - skillBaseConstraction
-        - skillHacking
-        - skillInstrumentation
-        - skillMaintenance
-        - skillPiloting
-        - skillMediumConstruction
-        - skillBasicAtmos
-        - skillShooting
-
-- type: entity
-  noSpawn: false
-  parent: MobHuman
-  id: OldStationTaxiPreset
-  name: Taxist
-  suffix: OldStation
-  components:
-    - type: RandomMetadata
-      nameSegments:
-      - Таксист
-      - names_last
-    - type: Sprite
-      netsync: false
-      sprite: Markers/jobs.rsi
-      state: ertleadereva
-    - type: Loadout
-      prototypes: [ OldStationTaxiGear ]
-    - type: RandomHumanoidAppearance
-      randomizeName: false
-    - type: CrewSkills
-      skills:
-       - skillBotany
-       - skillBaseMed
-       - skillBaseConstraction
-       - skillPiloting
-
-- type: entity
-  noSpawn: false
-  parent: MobHuman
-  id: OldStationLapshaPreset
-  name: Noodle Shop
-  suffix: OldStation
-  components:
-    - type: RandomMetadata
-      nameSegments:
-      - Лапшичник
-      - names_last
-    - type: Sprite
-      netsync: false
-      sprite: Markers/jobs.rsi
-      state: ertleadereva
-    - type: Loadout
-      prototypes: [ OldStationLapshaGear ]
-    - type: RandomHumanoidAppearance
-      randomizeName: false
-    - type: CrewSkills
-      skills:
-       - skillBotany
-       - skillBaseMed
-       - skillBaseConstraction
-       - skillPiloting
-       - skillBartending
-       - skillCooking
-       - skillMediumBotany
+    # - type: CrewSkills
+    #   skills:
+    #     - skillBotany
+    #     - skillBaseMed
+    #     - skillBaseConstraction
+    #     - skillHacking
+    #     - skillInstrumentation
+    #     - skillMaintenance
+    #     - skillPiloting
+    #     - skillMediumConstruction
+    #     - skillBasicAtmos

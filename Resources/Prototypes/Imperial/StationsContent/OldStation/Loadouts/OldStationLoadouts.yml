@@ -29,29 +29,30 @@
 - type: startingGear
   id: OldStationMercGear
   equipment:
-    jumpsuit: VlOldStationMercJumpsuit
-    back: VlMercBackpack
-    shoes: ClothingShoesBootsCombat
-    gloves: VlOldStationMercGloves
-    ears: VlMercHeadset
-    id: VlOldStationMercPDA
-    pocket1: CombatMedipen
-    pocket2: WeaponPistolViper
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    back: ClothingBackpackMerc
+    shoes: ClothingShoesBootsMercFilled
+    head: ClothingHeadBandMerc
+    eyes: ClothingEyesGlassesMercenary
+    gloves: ClothingHandsGlovesMercFingerless
+    outerClothing: ClothingOuterVestWebMerc
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltMercWebbing
+    pocket1: ClothingMaskGasMerc
 
 - type: startingGear
   id: OldStationHeadMercGear
   equipment:
-    jumpsuit: VlOldStationMercJumpsuit
-    back: VlMercBackpack
-    shoes: ClothingShoesBootsMag
-    head: VlMercBeret
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: VlOldStationMercGloves
-    outerClothing: VlOldStationMercCMDSuitOne
-    ears: VlMercHeadset
-    id: VlOldStationMercPDA
-    pocket1: CombatMedipen
-    pocket2: WeaponRevolverDeckard
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    back: ClothingBackpackMerc
+    shoes: ClothingShoesBootsMercFilled
+    head: ClothingHeadHatBeretMerc
+    eyes: ClothingEyesGlassesMercenary
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterVestWebMerc
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltMercWebbing
+    pocket1: ClothingMaskGasMerc
 
 - type: startingGear
   id: OldStationBomjGear
@@ -66,28 +67,3 @@
     ears: ClothingHeadsetGanza
     belt: ClothingBeltStorageWaistbag
     pocket1: DrinkFlaskBar
-
-- type: startingGear
-  id: OldStationTaxiGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitRepairmanNT
-    back: ClothingBackpackDuffelEngineering
-    shoes: ClothingShoesColorBlack
-    head: ClothingHeadHatYellowsoft
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsGlovesFingerless
-    outerClothing: ClothingOuterArmorBasic
-    ears: ClothingHeadsetGanza
-    belt: ClothingBeltStorageWaistbag
-
-- type: startingGear
-  id: OldStationLapshaGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitChef
-    back: ClothingBackpackDuffel
-    shoes: ClothingShoesColorBlack
-    eyes: ClothingEyesHudBeer
-    gloves: ClothingHandsGlovesFingerless
-    outerClothing: ClothingOuterDogi
-    ears: ClothingHeadsetGanza
-    belt: ClothingBeltKatanaSheath
