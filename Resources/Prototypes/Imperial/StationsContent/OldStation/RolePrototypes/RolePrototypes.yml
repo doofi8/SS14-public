@@ -1,0 +1,215 @@
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationTraderPreset
+  name: Trader
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Торговец
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationTraderGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking
+        - skillBartending
+        - skillMedicalEquipment
+        - skillPiloting
+        - skillShooting
+        - skillMaintenance
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationSmugglerPreset
+  name: Smuggler
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Контрабандист
+      - names_last
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationSmugglerGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillPiloting
+        - skillShooting
+        - skillMaintenance
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationMercPreset
+  name: Merc
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Наёмник
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationMercGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation
+        - skillMaintenance
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting
+        - skillShooting
+        - skillSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationHeadMercPreset
+  name: Head Merc
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Главарь
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationHeadMercGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation
+        - skillMaintenance
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting
+        - skillShooting
+        - skillSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationBomjPreset
+  name: Bum
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Бомж
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationBomjGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation
+        - skillMaintenance
+        - skillPiloting
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationTaxiPreset
+  name: Taxist
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Таксист
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationTaxiGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+       - skillBotany
+       - skillBaseMed
+       - skillBaseConstraction
+       - skillPiloting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: OldStationLapshaPreset
+  name: Noodle Shop
+  suffix: OldStation
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Лапшичник
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ OldStationLapshaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: CrewSkills
+      skills:
+       - skillBotany
+       - skillBaseMed
+       - skillBaseConstraction
+       - skillPiloting
+       - skillBartending
+       - skillCooking
+       - skillMediumBotany

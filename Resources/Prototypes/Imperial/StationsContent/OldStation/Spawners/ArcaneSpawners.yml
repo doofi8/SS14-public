@@ -1,0 +1,153 @@
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationTrader
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-trader-name
+      description: OldStation-trader-desc
+      rules: OldStation-trader-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationTraderPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationSmuggler
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-smuggler-name
+      description: OldStation-smuggler-desc
+      rules: OldStation-smuggler-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationSmugglerPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationMerc
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-merc-name
+      description: OldStation-merc-desc
+      rules: OldStation-merc-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationMercPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationHeadMerc
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-hmerc-name
+      description: OldStation-hmerc-desc
+      rules: OldStation-hmerc-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationHeadMercPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationBomj
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-bomj-name
+      description: OldStation-bomj-desc
+      rules: OldStation-bomj-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationBomjPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationTaxi
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-taxi-name
+      description: OldStation-taxi-desc
+      rules: OldStation-taxi-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationTaxiPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnOldStationLapsha
+  name: ghost role spawn point
+  suffix: OldStation
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: OldStation-lapsha-name
+      description: OldStation-lapsha-desc
+      rules: OldStation-lapsha-rules
+      raffle:
+        settings: default
+    - type: GhostRoleMobSpawner
+      prototype: OldStationLapshaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva

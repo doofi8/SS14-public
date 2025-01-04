@@ -1,0 +1,93 @@
+- type: startingGear
+  id: OldStationTraderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMinuteManFormal
+    back: ClothingBackpackDuffel
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatBeretFrench
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterVestWeb
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltMinuteManMedicWebbing
+
+- type: startingGear
+  id: OldStationSmugglerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    head: ClothingHeadHatSyndieMAA
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterWinterSyndie
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltUtilityFilled
+    neck: ClothingNeckScarfStripedSyndieRed
+    id: SyndiPDA
+
+- type: startingGear
+  id: OldStationMercGear
+  equipment:
+    jumpsuit: VlOldStationMercJumpsuit
+    back: VlMercBackpack
+    shoes: ClothingShoesBootsCombat
+    gloves: VlOldStationMercGloves
+    ears: VlMercHeadset
+    id: VlOldStationMercPDA
+    pocket1: CombatMedipen
+    pocket2: WeaponPistolViper
+
+- type: startingGear
+  id: OldStationHeadMercGear
+  equipment:
+    jumpsuit: VlOldStationMercJumpsuit
+    back: VlMercBackpack
+    shoes: ClothingShoesBootsMag
+    head: VlMercBeret
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: VlOldStationMercGloves
+    outerClothing: VlOldStationMercCMDSuitOne
+    ears: VlMercHeadset
+    id: VlOldStationMercPDA
+    pocket1: CombatMedipen
+    pocket2: WeaponRevolverDeckard
+
+- type: startingGear
+  id: OldStationBomjGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerNT
+    back: ClothingBackpackCargo
+    shoes: ClothingShoesBootsWinter
+    head: ClothingHeadHatUshanka
+    eyes: ClothingEyesGlasses
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterCoatSpaceAsshole
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltStorageWaistbag
+    pocket1: DrinkFlaskBar
+
+- type: startingGear
+  id: OldStationTaxiGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRepairmanNT
+    back: ClothingBackpackDuffelEngineering
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatYellowsoft
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterArmorBasic
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltStorageWaistbag
+
+- type: startingGear
+  id: OldStationLapshaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChef
+    back: ClothingBackpackDuffel
+    shoes: ClothingShoesColorBlack
+    eyes: ClothingEyesHudBeer
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterDogi
+    ears: ClothingHeadsetGanza
+    belt: ClothingBeltKatanaSheath
